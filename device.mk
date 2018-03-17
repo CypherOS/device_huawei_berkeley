@@ -79,6 +79,13 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     RemovePackages
 
+# Telephony
+PRODUCT_PACKAGES += \
+    telephony-huawei
+
+PRODUCT_BOOT_JARS += \
+    telephony-huawei
+
 # VNDK
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vndk-compat/vndk-detect:system/bin/vndk-detect \

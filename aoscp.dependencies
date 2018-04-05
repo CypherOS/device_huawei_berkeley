@@ -1,5 +1,11 @@
 [
   {
+    "repository":  "kernel_common",
+    "target_path": "kernel/common",
+	"branch":      "parfait-release",
+    "remote":      "aoscp"
+  },
+  {
     "repository":  "proprietary_vendor_huawei",
     "target_path": "vendor/huawei",
 	"branch":      "parfait-release",

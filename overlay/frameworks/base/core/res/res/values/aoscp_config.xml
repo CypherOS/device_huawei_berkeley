@@ -22,4 +22,7 @@
         <item>/sys/class/power_supply/Battery/scp_status</item>
     </string-array>
 	
+	<!-- Whether the device requires overlays to be in /system/overlay -->
+    <bool name="config_hasSystemOverlayPath">true</bool>
+	
 </resources>

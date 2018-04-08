@@ -22,4 +22,11 @@
         <item>/sys/class/power_supply/Battery/scp_status</item>
     </string-array>
 	
+	<!-- Whether device has a custom overlay directory -->
+    <bool name="config_hasEnforcedOverlayPaths">true</bool>
+	<!-- Path to where overlays should be when config_hasEnforedOverlayPaths is set to true -->
+    <string-array name="config_enforcedOverlayPaths" translatable="false">
+        <item>/system/overlay</item>
+    </string-array>
+	
 </resources>

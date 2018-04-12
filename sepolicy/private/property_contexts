@@ -1,4 +1,5 @@
 sys.vndk.ldconfig    u:object_r:vndk_detect_prop:s0
+qemu.hw.mainkeys     u:object_r:qemu_hw_mainkeys_prop:s0
 
 # Allow system server to change fingerprint nav properties
-sys.fpnav.enabled           u:object_r:sys_fpnav_enabled_prop:s0
+sys.fpnav.enabled    u:object_r:sys_fpnav_enabled_prop:s0

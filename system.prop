@@ -9,3 +9,6 @@ sys.fpnav.enabled=0
 
 # Perf
 ro.vendor.qti.sys.fw.bg_apps_limit=60
+
+# Enable navigation bar by default
+qemu.hw.mainkeys=0

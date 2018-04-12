@@ -14,6 +14,3 @@ on property:sys.fpnav.enabled=1
     write /sys/devices/platform/fingerprint/nav 1
     stop fps_hal_ext
     start fps_hal_ext
-
-on property:ro.aoscp.device=*
-    setprop qemu.hw.mainkeys 1

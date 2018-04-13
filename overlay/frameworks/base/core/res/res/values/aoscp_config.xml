@@ -27,5 +27,21 @@
 
     <!-- Determines whether the device supports fingerprint navigation -->
     <bool name="config_supportsFPNavigation">true</bool>
+	
+	<!-- Key codes of fingerprint gestures. If the gesture is not supported set it to 0. -->
+    <integer name="config_fpLongpressKeyCode">28</integer>
+	<integer name="config_fpSwipeUpKeyCode">113</integer>
+	<integer name="config_fpSwipeDownKeyCode">117</integer>
+
+    <!-- Default settings for gestures
+            0 - Disabled
+            1 - Toggle flashlight
+            2 - Toggle airplane mode
+            3 - Play/Pause music
+            4 - Next music
+            5 - Previous music
+            6 - Take screenshot
+            7 - Assistant -->
+    <integer name="config_fpLongpressDefault">7</integer>
 
 </resources>

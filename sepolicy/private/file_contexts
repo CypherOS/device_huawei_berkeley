@@ -16,8 +16,9 @@
 /data/facapp                    u:object_r:cust_data_file:s0
 /data/custom_cota\.bin          u:object_r:cust_data_file:s0
 
-# DMD
+# HW Device
 /dev/dsm                   u:object_r:dmd_device:s0
+/dsm(/.*)?                 u:object_r:dsm_device:s0
 
 # HiSEE
 /hisee_fs(/.*)?            u:object_r:hisee_data_file:s0

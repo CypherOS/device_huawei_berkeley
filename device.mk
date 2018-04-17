@@ -89,6 +89,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
     RemovePackages
+	
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1-service
 
 # VNDK
 PRODUCT_COPY_FILES += \

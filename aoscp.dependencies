@@ -12,9 +12,9 @@
     "remote":      "aoscp"
   },
   {
-    "repository":  "MindTheGapps/vendor_gapps",
+    "repository":  "vendor_gapps",
     "target_path": "vendor/gapps",
-	"branch":      "master",
-    "remote":      "github"
+	"branch":      "parfait-release",
+    "remote":      "aoscp"
   }
 ]

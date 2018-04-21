@@ -1,4 +1,1 @@
 domain_trans(init, rootfs, adbd)
-
-# Allow init to mount fingerprint keylayout
-allow init vendor_file:file mounton;

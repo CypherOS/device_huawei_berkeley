@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2014-2015 The CyanogenMod Project
+     Copyright (C) 2018 CypherOS
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,6 +15,11 @@
      limitations under the License.
 -->
 <resources>
-    <!-- Defaults for LineageSettings.Global.DEV_FORCE_SHOW_NAVBAR -->
-    <integer name="def_force_show_navbar">1</integer>
+
+    <!-- Paths to fast charging status file to detect whether an oem fast charger is active -->
+    <string-array name="config_oemFastChargerStatusPaths" translatable="false">
+        <item>/sys/class/power_supply/Battery/fcp_status</item>
+        <item>/sys/class/power_supply/Battery/scp_status</item>
+    </string-array>
+	
 </resources>

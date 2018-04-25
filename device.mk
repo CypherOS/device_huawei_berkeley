@@ -79,6 +79,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.build.version.release=$(PLATFORM_VERSION) \
     ro.build.version.sdk=$(PLATFORM_SDK_VERSION)
 
+# Vendor Properties Overrides
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.vendor.override.product_model=Honor View 10 \
+    ro.vendor.override.security_patch=2018-03-05
+
 # Recovery
 PRODUCT_PACKAGES += \
     resize2fs_static

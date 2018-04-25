@@ -79,6 +79,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.build.version.release=$(PLATFORM_VERSION) \
     ro.build.version.sdk=$(PLATFORM_SDK_VERSION)
 
+# Vendor Properties Overrides
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.vendor.override.product_model=$(PRODUCT_MODEL) \
+    ro.vendor.override.security_patch=$(PLATFORM_SECURITY_PATCH)
+
 # Recovery
 PRODUCT_PACKAGES += \
     resize2fs_static

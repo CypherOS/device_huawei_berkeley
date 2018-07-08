@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,17 +12,14 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-include $(CLEAR_VARS)
-LOCAL_SHARED_LIBRARIES := libhidltransport
-LOCAL_MODULE := android.hidl.base@1.0
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-include $(BUILD_SHARED_LIBRARY)
+$(call inherit-product, device/huawei/berkeley/full_berkeley.mk)
 
-include $(CLEAR_VARS)
-LOCAL_SHARED_LIBRARIES := libhidltransport
-LOCAL_MODULE := android.hidl.manager@1.0
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-include $(BUILD_SHARED_LIBRARY)
+# Inherit some common aoscp stuff.
+$(call inherit-product, vendor/aoscp/configs/common_full_phone.mk)
+
+PRODUCT_NAME := aoscp_berkeley
+PRODUCT_DEVICE := berkeley
+PRODUCT_BRAND := Huawei
+PRODUCT_MODEL := Honor View 10

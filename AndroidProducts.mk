@@ -13,10 +13,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# inherit from common kirin970-common
--include device/huawei/kirin970-common/BoardConfigCommon.mk
-
-DEVICE_PATH := device/huawei/berkeley
-
-# Assert
-TARGET_OTA_ASSERT_DEVICE := berkeley,kirin970
+PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/full_berkeley.mk

@@ -12,11 +12,18 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-# inherit from common kirin970-common
--include device/huawei/kirin970-common/BoardConfigCommon.mk
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/treble_common.mk)
 
-DEVICE_PATH := device/huawei/berkeley
+# Inherit from berkeley device
+$(call inherit-product, device/huawei/berkeley/device.mk)
 
-# Assert
-TARGET_OTA_ASSERT_DEVICE := berkeley,kirin970
+# Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := berkeley
+PRODUCT_NAME := full_berkeley
+PRODUCT_BRAND := Huawei
+PRODUCT_MODEL := berkeley

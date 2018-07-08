@@ -12,11 +12,14 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-# inherit from common kirin970-common
--include device/huawei/kirin970-common/BoardConfigCommon.mk
+# Call the proprietary setup
+$(call inherit-product-if-exists, vendor/huawei/berkeley/berkeley-vendor.mk)
 
-DEVICE_PATH := device/huawei/berkeley
+# Local overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay
 
-# Assert
-TARGET_OTA_ASSERT_DEVICE := berkeley,kirin970
+# Inherit from kirin970-common
+$(call inherit-product, device/huawei/kirin970-common/kirin970.mk)

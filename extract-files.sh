@@ -1,3 +1,4 @@
+#!/bin/bash
 #
 # Copyright (C) 2018 The LineageOS Project
 #
@@ -12,11 +13,13 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-# inherit from common kirin970-common
--include device/huawei/kirin970-common/BoardConfigCommon.mk
+set -e
 
-DEVICE_PATH := device/huawei/berkeley
+# Required!
+export DEVICE=berkeley
+export DEVICE_COMMON=kirin970-common
+export VENDOR=huawei
 
-# Assert
-TARGET_OTA_ASSERT_DEVICE := berkeley,kirin970
+./../../$VENDOR/$DEVICE_COMMON/extract-files.sh $@

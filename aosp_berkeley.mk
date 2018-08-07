@@ -12,6 +12,15 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_berkeley.mk
+$(call inherit-product, device/huawei/berkeley/full_berkeley.mk)
+
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
+PRODUCT_NAME := aosp_berkeley
+PRODUCT_DEVICE := berkeley
+PRODUCT_BRAND := Huawei
+PRODUCT_MODEL := Honor View 10
